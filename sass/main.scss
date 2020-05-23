@@ -1,10 +1,10 @@
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
+// body {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   height: 100vh;
+// }
 
 // .container {
 //   display: grid;
@@ -107,55 +107,92 @@ body {
 //   grid-area: foot;
 // }
 
+// TAKING THE LONG ROUTE OF PLACING THE ITEMS
+
+// .container {
+//   display: grid;
+//   width: 40vw;
+//   height: 80%;
+//   gap: 20px;
+//   grid-template-columns: repeat(4, 1fr);
+//   grid-template-rows: repeat(5, 100px);
+
+//   &__item {
+//     background-color: red;
+//     color: #fff;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//   }
+// }
+
+// .header {
+//   grid-column: 1/-1;
+//   grid-row: 1/2;
+// }
+
+// .smallbox--1 {
+//   grid-column: 1/2;
+//   grid-row: 2/3;
+// }
+
+// .smallbox--2 {
+//   grid-column: 2/3;
+//   grid-row: 2/3;
+// }
+
+// .smallbox--3 {
+//   grid-column: 3/4;
+//   grid-row: 2/3;
+// }
+
+// .sidebar {
+//   grid-column: 4/5;
+//   grid-row: 2 / span 3;
+// }
+
+// .main-content {
+//   grid-column: 1 / span 3;
+//   grid-row: 3 / 5;
+// }
+
+// .footer {
+//   grid-column: 1/-1;
+//   grid-row: 5/6;
+// }
+
+//JONA'S SOLUTION
+
 .container {
   display: grid;
-  width: 40vw;
-  height: 80%;
-  gap: 20px;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 100px);
+  width: 1000px;
+  gap: 30px;
+  margin: 30px auto;
+  grid-template-rows: 100px 200px 400px 100px;
+  grid-template-columns: repeat(3, 1fr) 200px;
 
-  &__item {
-    background-color: red;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  & > * {
+    background-color: orangered;
+    padding: 20px;
+    color: white;
+    font-size: 20px;
+    font-family: sans-serif;
   }
 }
 
 .header {
   grid-column: 1/-1;
-  grid-row: 1/2;
-}
-
-.smallbox--1 {
-  grid-column: 1/2;
-  grid-row: 2/3;
-}
-
-.smallbox--2 {
-  grid-column: 2/3;
-  grid-row: 2/3;
-}
-
-.smallbox--3 {
-  grid-column: 3/4;
-  grid-row: 2/3;
 }
 
 .sidebar {
   grid-column: 4/5;
-  grid-row: 2 / span 3;
+  grid-row: 2 / span 2;
 }
 
 .main-content {
   grid-column: 1 / span 3;
-  grid-row: 3 / 5;
 }
 
 .footer {
   grid-column: 1/-1;
-  grid-row: 5/6;
 }
-// TAKING THE LONG ROUTE OF PLACING THE ITEMS
