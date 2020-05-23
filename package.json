@@ -1,0 +1,23 @@
+{
+  "name": "nexter_grid",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rasheedshina22/nexter_grid_porject.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rasheedshina22/nexter_grid_porject/issues"
+  },
+  "homepage": "https://github.com/rasheedshina22/nexter_grid_porject#readme",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
