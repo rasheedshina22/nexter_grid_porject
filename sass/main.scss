@@ -6,41 +6,101 @@ body {
   height: 100vh;
 }
 
+// .container {
+//   display: grid;
+//   grid-template-columns: repeat(3, 150px);
+//   grid-template-rows: repeat(2, 150px);
+//   //for auto generated row
+//   //auto be default
+//   grid-auto-rows: 150px;
+//   //for auto generated columns
+//   //auto by default
+//   grid-auto-columns: 150px;
+//   row-gap: 20px;
+//   column-gap: 30px;
+// }
+
+// .item {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   color: #fff;
+//   font-weight: 600;
+//   &--1 {
+//     background-color: orangered;
+//     grid-column: 2 / span 2;
+//     grid-row: 2/3;
+//     z-index: 1;
+//   }
+
+//   &--2 {
+//     background-color: green;
+//   }
+
+//   &--3 {
+//     background-color: violet;
+//   }
+
+//   &--4 {
+//     background-color: pink;
+//   }
+
+//   &--5 {
+//     background-color: blueviolet;
+//   }
+
+//   &--6 {
+//     background-color: brown;
+//     grid-row: 1/2;
+//     grid-column: 2/3;
+//   }
+// }
+
 .container {
   display: grid;
-  grid-template-columns: repeat(3, 150px);
-  grid-template-rows: repeat(2, 150px);
-  row-gap: 20px;
-  column-gap: 30px;
+  width: 40vw;
+  height: 80%;
+  gap: 20px;
+  grid-template-areas:
+    'head head head head'
+    'smb1 smb2 smb3 side'
+    'mainc mainc mainc side'
+    'mainc mainc mainc side'
+    'foot foot foot foot';
+
+  &__item {
+    background-color: red;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
-.item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-weight: 600;
-  &--1 {
-    background-color: orangered;
-  }
+.header {
+  grid-area: head;
+}
 
-  &--2 {
-    background-color: green;
-  }
+.smallbox--1 {
+  grid-area: smb1;
+}
 
-  &--3 {
-    background-color: violet;
-  }
+.smallbox--2 {
+  grid-area: smb2;
+}
 
-  &--4 {
-    background-color: pink;
-  }
+.smallbox--3 {
+  grid-area: smb3;
+}
 
-  &--5 {
-    background-color: blueviolet;
-  }
+.main-content {
+  grid-area: mainc;
+}
 
-  &--6 {
-    background-color: brown;
-  }
+.sidebar {
+  grid-area: side;
+}
+
+.footer {
+  grid-area: foot;
 }
